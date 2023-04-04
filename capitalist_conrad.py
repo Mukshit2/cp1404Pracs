@@ -7,7 +7,7 @@ a 50% chance that it decreases by 0 to 5%.
 If the price rises above $100, or falls below $1, the program should end.
 The price should be displayed to the nearest cent (e.g. $33.59, not $33.5918232901)
 """
-
+import random
 
 MAX_INCREASE = 0.175  # 17.5%
 MAX_DECREASE = 0.05  # 5%
@@ -20,8 +20,6 @@ out_file = open(OUTPUT_FILE, 'w')
 price = INITIAL_PRICE
 print(f"Starting price: ${price:,.2f}", file=out_file)
 number_of_days = 0
-
-from random import randint
 
 while MIN_PRICE <= price <= MAX_PRICE:
     number_of_days += 1
